@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @matevz-kovacic
-- 👀 I’m interested in AI applications in medicine.
-- 💞️ I’m looking to collaborate on AI drug discovery systems.
+- 👀 I’m interested in AI and machine learning applications.
+- 💞️ I’m looking to collaborate on interesting projects.
 - 📫 matevz.celje@gmail.com
 
 <!--- - 🌱 I’m currently learning ... --->
