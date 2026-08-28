@@ -15,8 +15,12 @@ Recent work applies Active Model to mature, heavily optimized production softwar
   [#4729](https://github.com/facebook/zstd/pull/4729) · [#4732](https://github.com/facebook/zstd/pull/4732) · [#4733](https://github.com/facebook/zstd/pull/4733)
   Includes a decompression-hot-loop optimization removing a loop-carried memory dependency, improving decode throughput by **+2.7–3.4% with GCC and +5.5–9.3% with Clang on Zen 5**, with the same direction on Intel Raptor Lake.
 
-* **dav1d — two AV1 decoder optimizations prepared for upstream submission**
-  One removes an unnecessary compound-prediction scratch-buffer round trip, reaching **+2.79% whole-decoder throughput on x86** and **+1.73% on ARM Neoverse-N1**. A second exact transformation removes **77.5% of redundant temporal-MV candidate processing**. Both pass **240/240 AOMedia AV1 conformance vectors**.
+* **dav1d — two AV1 decoder optimizations submitted upstream**
+  [!1968](https://code.videolan.org/videolan/dav1d/-/merge_requests/1968) · [!1967](https://code.videolan.org/videolan/dav1d/-/merge_requests/1967)
+  The first removes an unnecessary compound-prediction scratch-buffer round trip: **+0.97%** whole-decoder throughput on Intel Raptor Lake, **+1.73%** on ARM Neoverse-N1, and up to **+2.79%** on the SSE2 dispatch path, where the kernels it deletes are slowest. The second is an exact transformation removing **77.5% of redundant temporal-MV candidate processing**, worth **+0.68%** on Raptor Lake and **+0.78%** on Neoverse-N1. Every figure is a 12-stream geometric mean against an A/A noise floor measured on that machine. Both are bit-exact against upstream output and pass **240/240 AOMedia AV1 conformance vectors**; both pipelines pass VideoLAN CI.
+
+  
+  
 
 ## Mathematical and computational results
 
