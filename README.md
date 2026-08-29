@@ -10,7 +10,7 @@ My current project is [Active Model](https://github.com/matevz-kovacic/active-mo
 
 Active Model reached **#1 on NVIDIA SOL-ExecBench kernel 094 (`time_decay_exponential_stabilization`)** with a **0.998564 SOL score** on NVIDIA B200, ahead of submissions from doubleAI, Databricks and SF Tensor.
 
-[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) · [Kernel](https://research.nvidia.com/benchmarks/sol-execbench/kernel/94)
+[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) 
 
 **Autonomy boundary.** Active Model produced every implementation, experiment, measurement and attribution in this campaign. A human research lead set strategy and, in the final optimization rounds, named specific techniques to try. The model implemented and adjudicated them against its own measurements — adopting three, refuting four others with identified mechanisms — and independently found both the largest single defect (a compiler-flag regression costing ~1.6× on the hot path) and the profiling result that explained the remaining gap.
 
