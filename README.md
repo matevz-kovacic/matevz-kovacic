@@ -24,7 +24,7 @@ From a **single high-level prompt**, Active Model independently selected optimiz
 
 Result: **−0.729 s mean** versus the previous Track 1 implementation in paired same-machine measurements across two independent **8×H100** leases, clearing the measured noise floor by 6.0× and 8.7× (mean val loss 3.27886, p = 0.0014 over 20 runs).
 
-This experiment is particularly useful to me because the optimization target is the training loop of an actual language model rather than a synthetic benchmark.
+This experiment is particularly useful because the optimization target is the training loop of an actual language model rather than a synthetic benchmark.
 
 ## Other systems work
 
