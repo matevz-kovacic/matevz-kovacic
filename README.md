@@ -21,14 +21,15 @@ not self-reported.
 [Kernel](https://research.nvidia.com/benchmarks/sol-execbench/kernel/94) ·
 [Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
 
-**Autonomy boundary.** Autonomous search reached ≈#8 — three candidate implementations
-generated, implemented and evaluated on B200 in under four hours. Active Model produced
-every implementation, experiment, measurement and attribution in the campaign. As
-research lead I set strategy and, in the final optimization rounds, named specific
-techniques to try: seven proposals, of which the model adopted three and refuted four
-against its own measurements, each with a mechanism identified. It independently found
-the largest single defect — a compiler-flag regression costing ~1.6× on the hot path —
-and the profiling result that explained the remaining gap.
+**Autonomy boundary.** Autonomous search reached ≈#8 — three candidate architectures written
+and evaluated on B200 in under four hours, from the public specification and reference 
+implementation. Active Model produced every implementation, experiment, measurement and 
+attribution in the campaign. As research lead I chose the target kernel and set strategy, 
+and in the final optimization rounds named specific techniques to try: 13 proposals, 
+of which the model adopted three and refuted 10 against its own measurements, each with a 
+mechanism identified. It independently found the largest single defect — a compiler-flag 
+regression costing ~1.6× on the hot path — and the profiling result that explained the remaining gap.
+
 
 
 ### modded-nanogpt — autonomous 8×H100 LLM-training optimization
