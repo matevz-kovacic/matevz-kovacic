@@ -22,7 +22,7 @@ not self-reported.
 [Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
 
 **Autonomy boundary.** Autonomous search reached ≈#8 — three candidate implementations
-generated, implemented and evaluated on B200 in under four hours, with technique-level input. Active Model produced
+generated, implemented and evaluated on B200 in under four hours. Active Model produced
 every implementation, experiment, measurement and attribution in the campaign. As
 research lead I set strategy and, in the final optimization rounds, named specific
 techniques to try: seven proposals, of which the model adopted three and refuted four
