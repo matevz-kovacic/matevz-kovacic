@@ -6,7 +6,7 @@ My current project is [Active Model](https://github.com/matevz-kovacic/active-mo
 
 ## Selected results
 
-### 🥇 NVIDIA SOL-ExecBench — reached #1 on B200
+### 🥇 NVIDIA SOL-ExecBench — reached #1 on kernel 094, B200
 
 Active Model reached **#1 on NVIDIA SOL-ExecBench kernel 094 (`time_decay_exponential_stabilization`)** with a **0.998564 SOL score** on NVIDIA B200, ahead of submissions from doubleAI, Databricks and SF Tensor.
 
