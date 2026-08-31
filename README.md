@@ -6,31 +6,15 @@ My current project is [Active Model](https://github.com/matevz-kovacic/active-mo
 
 ## Selected results
 
-### 🥇 NVIDIA SOL-ExecBench kernel 094 — #1 on B200
+### 🥇 NVIDIA SOL-ExecBench — reached #1 on B200
 
-I had never written a GPU kernel. Over a single weekend, [Active Model](https://github.com/matevz-kovacic/active-model) — a research
-harness I'd built over the preceding months for entirely unrelated problems — reached
-**#1** on `094_time_decay_exponential_stabilization`, SOL score **0.998564**, 16/16
-workloads correct, ahead of submissions from doubleAI, Databricks and SF Tensor.
+Active Model reached **#1 on NVIDIA SOL-ExecBench kernel 094 (`time_decay_exponential_stabilization`)** with a **0.998564 SOL score** on NVIDIA B200, ahead of submissions from doubleAI, Databricks and SF Tensor.
 
-SOL-ExecBench scores kernels against hardware speed-of-light limits rather than a
-framework baseline, and NVIDIA runs the evaluator — the number is measured by them,
-not self-reported.
+[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) · [Kernel](https://research.nvidia.com/benchmarks/sol-execbench/kernel/94) · [Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
 
-[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) ·
-[Kernel](https://research.nvidia.com/benchmarks/sol-execbench/kernel/94) ·
-[Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
+**Autonomy boundary.** Active Model produced every implementation, experiment, measurement and attribution in this campaign. A human research lead set strategy and, after the first measured round, named specific techniques to try. The model implemented and adjudicated 13 such proposals against its own measurements — adopting 3 and refuting 10 with identified mechanisms — and independently found the largest single defect of the campaign: a compiler-flag regression costing ~1.6× on the hot path.
 
-**Autonomy boundary.** Autonomous search reached ≈#8 — three candidate architectures written
-and evaluated on B200 in under four hours, from the public specification and reference 
-implementation. Active Model produced every implementation, experiment, measurement and 
-attribution in the campaign. As research lead I chose the target kernel and set strategy, 
-and in the final optimization rounds named specific techniques to try: 13 proposals, 
-of which the model adopted three and refuted 10 against its own measurements, each with a 
-mechanism identified. It independently found the largest single defect — a compiler-flag 
-regression costing ~1.6× on the hot path — and the profiling result that explained the remaining gap.
-
-
+> **The first 4 autonomous hours reached a locally measured ≈#8; model-generated engineering under human research direction reached #1.**
 
 ### modded-nanogpt — autonomous 8×H100 LLM-training optimization
 
