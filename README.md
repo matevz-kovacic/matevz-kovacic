@@ -8,7 +8,7 @@ My current project is [Active Model](https://github.com/matevz-kovacic/active-mo
 
 ### 🥇 NVIDIA SOL-ExecBench kernel 094 — #1 on B200
 
-I had never written a GPU kernel. Over a single weekend, **Active Model** — a research
+I had never written a GPU kernel. Over a single weekend, [Active Model](https://github.com/matevz-kovacic/active-model) — a research
 harness I'd built over the preceding months for entirely unrelated problems — reached
 **#1** on `094_time_decay_exponential_stabilization`, SOL score **0.998564**, 16/16
 workloads correct, ahead of submissions from doubleAI, Databricks and SF Tensor.
