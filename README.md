@@ -12,11 +12,11 @@ Active Model holds **#1 on NVIDIA SOL-ExecBench kernel 094 (`time_decay_exponent
 
 [Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) · [Kernel](https://research.nvidia.com/benchmarks/sol-execbench/kernel/94) · [Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
 
-**Autonomy boundary.** Active Model produced every implementation, experiment, measurement and attribution in this campaign. A human research lead set strategy and, after the first measured round, named specific techniques to try. The model implemented and adjudicated 13 such proposals against its own measurements — adopting 3 and refuting 10 with identified mechanisms — and independently found the largest single defect of the campaign: a compiler-flag regression costing ~1.6× on the hot path.
+**Autonomy boundary.** Active Model produced every implementation, experiment, measurement and attribution in this campaign. A human research lead set strategy and, after the first measured round, named specific techniques to try. The model implemented and adjudicated 13 such proposals against its own measurements — adopting 3 and refuting 10 with identified mechanisms — and independently found the largest single defect of the campaign, a defect in how every prior submission had been built.
 
 > **The first 4 autonomous hours reached a locally measured ≈#8; model-generated engineering under human research direction reached #1.**
 
-The first #1 (0.998647) was overtaken four days later by another participant at 0.999005. A second campaign, started from the current kernel with the first campaign's work as read-only input, produced a new kernel architecture on its own — an exact, replay-free intra-CTA time split — that retook the lead on its first official measurement, and three rounds of written review widened the margin to **+87 ppm** over the participant who had overtaken it: 43 B200 rentals, 12.2 GPU-hours, $45, reproduced across four official evaluations.
+The first #1 (0.998647) was overtaken days later by another participant at 0.999005. A second campaign, started from the current kernel with the first campaign's work as read-only input, produced a substantially different kernel architecture on its own that retook the lead on its first official measurement, and three rounds of written review widened the margin to **+87 ppm** over the participant who had overtaken it: 43 B200 rentals, 12.2 GPU-hours, $45, reproduced across four official evaluations. While the benchmark remains contested, the techniques are withheld; the result is NVIDIA's measurement.
 
 ### modded-nanogpt — autonomous 8×H100 LLM-training optimization
 
