@@ -6,11 +6,35 @@ My current project is [Active Model](https://github.com/matevz-kovacic/active-mo
 
 ## Selected results
 
-### 🥇 NVIDIA SOL-ExecBench — #1 on kernel 094, B200 — reached, lost, retaken
+### 🥇 NVIDIA SOL-ExecBench — #1 on two B200 kernels
+
+Two independent **#1 results on NVIDIA's official SOL-ExecBench leaderboards**, evaluated on NVIDIA B200 hardware.
+
+#### Kernel 049 — #1 on B200
+
+Active Model first optimized **SOL-ExecBench kernel 049** and independently produced two candidate kernels whose measured performance would have placed them **#2 on the public leaderboard at the time**. I did not publish either result.
+
+The remaining gap was difficult: the existing #1 was a strong solution that the initial campaign could not crack. I therefore added an external reasoning loop around Active Model.
+
+I repeatedly pasted the current best Active Model solution and its measurements into **ChatGPT, using Astra at maximum reasoning effort**, and asked for new candidate architectures, variations, and optimization directions. I then passed those proposals back into **Active Model**, which converted them into actual kernel implementations, ran them on B200, measured them, analyzed the results, and continued the search.
+
+The loop was repeated several times:
+
+> **Active Model kernel → B200 measurements → ChatGPT/Astra research proposals → Active Model implementation and experimentation → new best kernel**
+
+That iterative model-to-model research loop eventually broke through the existing #1 and produced the kernel that now holds **#1 on NVIDIA's official B200 leaderboard**.
+
+[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/49/B200)
+
+**Autonomy boundary.** Active Model independently reached approximately #2-level performance before external steering. Throughout the subsequent campaign, Active Model remained the implementation and experimental engine: it produced the actual kernels, executed the benchmarks, interpreted measurements, and incorporated successful ideas. ChatGPT/Astra was used between rounds as an external research adviser to propose new directions from the current solution and measured evidence. I orchestrated the exchange between the two systems.
+
+The implementation is currently withheld while the benchmark remains competitive; the leaderboard result is NVIDIA's measurement.
+
+#### Kernel 094 — #1 on B200 — reached, lost, retaken
 
 Active Model holds **#1 on NVIDIA SOL-ExecBench kernel 094 (`time_decay_exponential_stabilization`)** with a **0.999092 SOL score** on NVIDIA B200, ahead of submissions from SF Tensor, doubleAI and Databricks.
 
-[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) · [Kernel](https://research.nvidia.com/benchmarks/sol-execbench/kernel/94) · [Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
+[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/94/B200) · [Full campaign writeup](https://github.com/matevz-kovacic/active-model/blob/main/sol-execbench-094/README.md)
 
 **Autonomy boundary.** Active Model produced every implementation, experiment, measurement and attribution in this campaign. A human research lead set strategy and, after the first measured round, named specific techniques to try. The model implemented and adjudicated 13 such proposals against its own measurements — adopting 3 and refuting 10 with identified mechanisms — and independently found the largest single discrepancy of the campaign: a reproducibility discrepancy inherited from prior work, traced to its underlying mechanism.
 
