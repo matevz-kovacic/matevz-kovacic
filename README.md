@@ -24,7 +24,7 @@ The loop was repeated several times:
 
 That iterative model-to-model research loop eventually broke through the existing #1 and produced the kernel that now holds **#1 on NVIDIA's official B200 leaderboard**.
 
-[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/49/B200)
+[Leaderboard](https://research.nvidia.com/benchmarks/sol-execbench/leaderboard/kernel/49/B200) · [Full campaign writeup](https://github.com/matevz-kovacic/active-model/tree/main/sol-execbench-049/README.md)
 
 **Autonomy boundary.** Active Model independently reached approximately #2-level performance before external steering. Throughout the subsequent campaign, Active Model remained the implementation and experimental engine: it produced the actual kernels, executed the benchmarks, interpreted measurements, and incorporated successful ideas. ChatGPT/Astra was used between rounds as an external research adviser to propose new directions from the current solution and measured evidence. I orchestrated the exchange between the two systems.
 
