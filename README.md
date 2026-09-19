@@ -42,16 +42,6 @@ Active Model holds **#1 on NVIDIA SOL-ExecBench kernel 094 (`time_decay_exponent
 
 The first #1 (0.998647) was overtaken days later by another participant at 0.999005. A second campaign, started from the current kernel with the first campaign's work as read-only input, produced on its own a substantially different kernel architecture that overcame a limitation the first campaign had treated as fundamental and retook the lead on its first official measurement, and three rounds of written review widened the margin to **+87 ppm** over the participant who had overtaken it: 43 B200 rentals, 12.2 GPU-hours, $45, reproduced across four official evaluations. While the benchmark remains contested, the techniques are withheld; the result is NVIDIA's measurement.
 
-### modded-nanogpt — autonomous 8×H100 LLM-training optimization
-
-[PR #358](https://github.com/KellerJordan/modded-nanogpt/pull/358) *(open)*
-
-From a **single high-level prompt**, Active Model independently selected optimization targets, wrote the patches, and ran the experiments.
-
-Result: **−0.729 s mean** versus the previous Track 1 implementation in paired same-machine measurements across two independent **8×H100** leases, clearing the measured noise floor by 6.0× and 8.7× (mean val loss 3.27886, p = 0.0014 over 20 runs).
-
-This experiment is particularly useful to me because the optimization target is the training loop of an actual language model rather than a synthetic benchmark.
-
 ## Production systems optimization
 
 * **llama.cpp** — [PR #27478](https://github.com/ggml-org/llama.cpp/pull/27478) *(open)*: "ggml : speed up batch-1 CPU decode, align large allocations". Up to **+15.29%** end-to-end token-generation throughput on Ryzen 7 9700X (attention change alone +10.67%) and **+9.22%** on Neoverse-N1, measured on Qwen3-30B-A3B Q4_K_M at 8192-token context.
